@@ -19,7 +19,7 @@ const randomTingzZone = document.querySelector("#rrrrandom-tingz")
 ////////////////
 
 
-const fetchARandomTing=()=>{
+const fetchARandomTing=()=>{ // woobly :)
 
     fetch('https://animechan.vercel.app/api/random')
     .then(response => response.json())
