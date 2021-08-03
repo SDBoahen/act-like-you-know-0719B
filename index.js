@@ -39,7 +39,7 @@ const init =()=>{
       console.log("WE SUPER LIT....BETTER YET, WE, ARE,,, LIVE 🙆🏾‍♂️")  // 
 
     
-    //   const DATABASE = []
+    //   const DATABASE = []  SMAMSKMSKLDMSLDM
 
 
       const changeTheH1 = document.querySelector("h1")
