@@ -19,6 +19,8 @@ const randomTingzZone = document.querySelector("#rrrrandom-tingz")
 ////////////////
 
 
+
+
 const fetchARandomTing=()=>{
 
     fetch('https://animechan.vercel.app/api/random')
@@ -35,11 +37,58 @@ const fetchARandomTing=()=>{
     })
 
 }
+
+
+
+
+const GETFetch=(URLtoFetchFrom)=>{
+
+    fetch(URLtoFetchFrom)
+    .then(response => response.json())
+    .then( (fetchedTing)=>{ console.log(fetchedTing) 
+    
+        // debugger
+
+    })
+
+}
+const POSTFetch=(objToPOST)=>{
+
+
+    bodyObj ={
+
+        method: "POST",
+        headers: { "Content-Type": "application/json"},
+
+        body: JSON.stringify(objToPOST)
+        // body: JSON.stringify({ postThisObj: objToPOST })
+        
+    }
+
+
+    fetch('http://localhost:3000/actors', bodyObj)
+    .then(response => response.json())
+    .then( (objThatShouldaPOSTED)=>{console.log(objThatShouldaPOSTED)
+
+    })
+
+}
+
 const init =()=>{ 
       console.log("WE SUPER LIT....BETTER YET, WE, ARE,,, LIVE 🙆🏾‍♂️")  // 
 
+
+
+
+        //   testOBJ = { name: "woobly" }
+        //   POSTFetch(testOBJ)
+
+        GETFetch("http://localhost:3000/actors")
+
     
-    //   const DATABASE = []
+
+
+        //   const DATABASE = []
 
 
       const changeTheH1 = document.querySelector("h1")
